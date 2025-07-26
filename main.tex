@@ -1,0 +1,136 @@
+\pdfminorversion=7
+\documentclass[11pt, a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+%\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{geometry}
+%\usepackage[top=2cm,bottom=2cm]{geometry}
+%\geometry{a4paper, margin=0.5in}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{caption}
+
+\input{./supportfiles/set-up}
+
+%\input{./supportfiles/topic_approval1}
+%\input{./supportfiles/topic_approval2}
+
+%\usepackage{natbib}
+
+%\bibliographystyle{ieeetr} % A popular style for technical papers
+
+%\bibliographystyle{plain}  % Or 'ieeetr', 'apalike', etc.
+%\bibliography{references}  % Without .bib extension
+
+% --- Correct Biblatex Setup for biber ---
+%\usepackage[style=numeric, backend=biber]{biblatex}
+%\usepackage[style=numeric, backend=biber, style=authoryear, sorting=ydnt]{biblatex}
+\usepackage[style=numeric, backend=biber, sorting=none]{biblatex}
+\addbibresource{references.bib} % Tells biblatex the name of your .bib file
+
+% --- Removed conflicting/unnecessary lines ---
+% \bibliographystyle{plain}  <-- REMOVED
+% \bibliography{references}   <-- REMOVED
+
+
+\begin{document}
+
+\emergencystretch 3em
+
+\input{./supportfiles/topic_approval1}
+\input{./supportfiles/topic_approval2}
+
+%\input{./supportfiles/title}
+%\input{./supportfiles/internal_pages.tex}
+
+\pagenumbering{roman} \setcounter{page}{2}
+
+\tableofcontents
+\listoffigures
+
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+%\printglossary
+%\printglossary[title=Special Terms,toctitle=List of Terms]
+
+\newpage
+
+\pagenumbering{arabic} \setcounter{page}{1}
+\doublespacing
+
+\begin{refsection} % Starts a new reference section
+
+%Beginning of actual writing
+
+%--------------------------------------------
+%input tex files here
+\input{./chapters/glossary}
+
+%\input{./chapters/abstract}
+
+\input{./chapters/intro_topic}
+%\input{./chapters/introduction}
+%\input{./chapters/motivation}
+
+%\input{./chapters/applications}
+
+%\input{./chapters/literature}
+\input{./chapters/literature_topic}
+
+%for internal purpose
+%\input{./chapters/analysis}
+%\input{./chapters/analysis_detailed}
+%\input{./chapters/comparative}
+%end for internal purposes
+
+%\input{./chapters/challenges}
+
+\input{./chapters/research_gaps}
+\input{./chapters/research_focus}
+
+%\input{./chapters/objectives}
+
+%\input{./chapters/datasets}
+
+%\input{./chapters/metrics}
+\input{./chapters/problem_statement}
+
+\input{./chapters/conclusion}
+
+\input{./chapters/bibliography}
+%\input{./chapters/acknowledge}
+
+
+%--------------------------------------------
+
+%\fancyhead[C]{Bibliography}
+
+%\bibliographystyle{plain}
+%\bibliography{./library}
+%\addcontentsline{toc}{chapter}{Bibliography}
+
+%\appendix
+
+%\printglossary[type=main] % For main glossary
+%\printglossary[type=acronym] % For acronym list (if used)
+
+%\begin{frame}[allowframebreaks]{References}
+%	
+%	\section*{References}
+%	\printbibliography
+%\end{frame}
+
+\end{refsection}
+
+\end{document}

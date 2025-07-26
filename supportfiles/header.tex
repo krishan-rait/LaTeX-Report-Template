@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage[a4paper, margin=0.5in, top=0.3in, headheight=2cm, includehead]{geometry}
+\usepackage{graphicx}
+\usepackage{helvet} % Using a sans-serif font like Helvetica, similar to the logo text
+\usepackage[T1]{fontenc}
+
+% 1. LOAD PACKAGES
+\usepackage{xcolor}      % Required for colors
+\usepackage{fancyhdr}
+\usepackage{tikz} % For the tinting effect
+%\usepackage{lipsum} % For dummy text
+
+% 2. DEFINE CUSTOM COLOR
+\definecolor{lightgray}{gray}{0.7}
+
+% 3. SETUP PAGE STYLE AND HEADER
+\pagestyle{fancy}
+\fancyhf{} % Clear default header/footer
+\renewcommand{\headrulewidth}{0.4pt} % Set rule thickness
+
+% Define a custom color named 'lightred' (40% red, 60% white)
+%\definecolor{lightred}{named}{red!40}
+\colorlet{lightred}{red!20} % Correct
+
+% 3. CUSTOMIZE THE HEADER RULE
+% Set the line's thickness
+\renewcommand{\headrulewidth}{2.0pt}
+
+% Redefine the rule command to add color
+\renewcommand{\headrule}{%
+	{\color{red}\hrule width\headwidth height\headrulewidth \vspace{\headruleskip}}%
+}
+
+% Apply the light color to the header text
+%\fancyhead[C]{\color{lightgray}My Light-Colored Header}
+
+% Apply the light color to the header rule
+%\renewcommand{\headrule}{%
+%	{\color{lightgray}\hrule width\headwidth height\headrulewidth \vspace{\headruleskip}}%
+%}
+
+% Set the footer as well (optional)
+\fancyfoot[C]{\color{lightgray}\thepage}
+
+% --- The tinting command ---
+%\newcommand{\tintlogo}[2][lightgray]{%
+%	\begin{tikzpicture}
+%		% Place the original logo image as a node
+%		\node[inner sep=0] (logo) {\includegraphics[width=\linewidth]{#2}};
+%		% Overlay a semi-transparent rectangle of the desired color
+%		% Blend mode 'multiply' often gives good results for coloring dark logos
+%		\begin{scope}[blend mode=multiply] 
+%			\fill[#1] (logo.south west) rectangle (logo.north east);
+%		\end{scope}
+%	\end{tikzpicture}%
+%}
+
+% Define the header content in a new command
+\newcommand{\makeheader}{%
+	\begin{minipage}[c]{0.2\textwidth}
+		\centering
+		% Include the logo image. Ensure 'logo.png' is in the same directory.	
+		
+%			\includegraphics[width=\linewidth] {raitlogo.jpeg}
+			\includegraphics[width=\linewidth] {raitlogo_light.png}
+			
+%		\tintlogo{raitlogo.jpeg} 
+		
+	\end{minipage}% <--- This '%' is important to prevent extra space
+	\hspace{0.05\textwidth}%
+	\begin{minipage}[c]{0.75\textwidth}
+		\centering
+		\sffamily % Use sans-serif font
+		\textbf{\Large RAMRAO ADIK INSTITUTE OF TECHNOLOGY, NERUL} \\[2.5ex]
+		\textbf{DEPARTMENT OF COMPUTER ENGINEERING} \\[1.5ex]
+		\textbf{\small Academic Year:  2025}
+		\vspace*{0.5cm} % Add some space to not overlap with the custom header
+	\end{minipage}%
+}
+
+% Set up the page style and place the header
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+%\renewcommand{\headrulewidth}{0pt} % Remove the default header line
+
+\fancyhead[C]{\color{lightgray} \makeheader}
+	\vspace*{1cm} % Add some space to not overlap with the custom header
+% Redefine the rule command to add color
+\renewcommand{\headrule}{%
+	{\color{lightred}\hrule width\headwidth height\headrulewidth \vspace{\headruleskip}}%
+}
+
+\begin{document}
+	
+	% The header will now appear automatically on this page.
+	% You can start the rest of your document content here.
+	\vspace*{2cm} % Add some space to not overlap with the custom header
+
+%	Your document content starts here...
+	
+\end{document}

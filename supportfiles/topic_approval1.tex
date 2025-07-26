@@ -1,0 +1,74 @@
+\chapter*{ }
+%\begin{titlepage}
+%	\begin{center}
+
+% Command to create a labeled rule for entries
+\newcommand{\entry}[2]{%
+	\makebox[6.0cm][l]{\textbf{#1}} : {#2}
+}
+
+%\newcommand{\longentry}[2]{%
+%	\parbox[t]{6.0cm}{\textbf{#1}} : {\raggedright #2}
+%}
+
+\newcommand{\longentry}[2]{%
+	\begin{minipage}[t]{6.0cm}\textbf{#1}\end{minipage} : 
+	\begin{minipage}[t]{10.0cm}#2\end{minipage}%
+}
+
+\newcommand{\longentryspace}[2]{%
+	\parbox[t]{6.0cm}{\textbf{#1}} : {#2}
+}
+
+%\begin{document}
+	
+	\begin{center}
+%		\rmfamily % Use Times new roman
+		\bfseries\Large
+		FACULTY OF TECHNOLOGY
+		\vspace{1.5em}
+		
+		\normalsize
+		
+		Topic Approval Proposal submitted for the \\
+		Doctor of Philosophy (Technology) \\
+		Degree in Computer Engineering
+	\end{center}
+	
+	\vspace{3em}
+		
+%		\rmfamily % Use Times new roman
+		
+	\setlength{\parindent}{0pt} % No indentation for the form
+	
+	\setlength{\parskip}{2.5em} % Spacing between form fields TODO
+	
+	\entry{Name of the Candidate}{xxxx}
+	
+	\longentry{Title of the Research Proposal}{yyyy}
+	
+%	\vspace{1.5em}
+	
+	\longentryspace{Coursework Credits and Date of Completion}{ }
+
+%	\vspace{1.5em}
+	
+	\longentryspace{Signature of the Candidate}{ }
+	
+	\longentryspace{Signature of the Research Supervisor}{ }
+	
+	\longentryspace{Signature of the Co-Supervisor}{ }
+	
+	\longentryspace{Signature of HOD}{ }
+	
+	\longentryspace{Signature of Ph.D. Coordinator}{ }
+	
+	\longentryspace{Signature of Principal}{ }
+
+	\vspace{1.5em}
+	
+	\longentryspace{Date of Submission of Proposal}{ }
+	
+%\end{document}
+%\end{center}
+%\end{titlepage}

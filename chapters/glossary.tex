@@ -1,0 +1,37 @@
+\renewcommand{\baselinestretch}{1.5}\normalsize
+%\chapter{Glossary}
+
+\chapter*{Glossary}
+\addcontentsline{toc}{chapter}{Glossary}
+
+%\thispagestyle{empty}
+
+\newcommand{\abbreviate}[2]{%
+	\makebox[2cm][l]{\textbf{#1}} \textbf{: } {\textbf{#2}}
+	\vspace{0.5em}
+}
+
+\label{Chapter Glossary}
+
+
+% Use \section* for an unnumbered section title, common for glossaries.
+\section*{List of Abbreviations}
+
+%
+%\newglossaryentry{glossary}{
+%	name=glossary,
+%	description={A list of terms with definitions}
+%}
+
+% Acronym entries (if you included the 'acronym' option)
+%\newacronym{api}{API}{Application Programming Interface}
+
+%\begin{description}[align=left, labelwidth=5cm, style=nextline]
+%\begin{description}
+	
+	\abbreviate{API}{Application Programming Interface}
+	
+	
+	
+%\end{description}
+
